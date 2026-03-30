@@ -11,8 +11,6 @@ body {
   min-height: 100vh;
   font-family: Arial, sans-serif;
 }
-.burger_icon
-
 /* ШАПКА: ТРИ БЛОКА */
 .navbar {
   background-color: rgba(88, 0, 88, 0.7); /* Сделал чуть прозрачным для стиля */
@@ -230,34 +228,51 @@ h2 {
 /* ВСЁ ДЛЯ ЭКРАНОВ МЕНЬШЕ 1000px */
 @media (max-width: 768px) {
   .ank {
-    position: fixed;
+    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: center;
   }
+  .nav-brand {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 100%;
+  }
+  .nav-brand a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .nav-title {
     display: flex;
-    justify-content: end;
+    justify-content: center;
     flex-direction: row;
   }
+
+  .navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .a {
+    position: relative;
+  }
   .submenu {
-    position: static;
-    width: 100%;
-    left: 0 !important;
-    padding: 0;
-    margin: 0;
-    min-height: 0;
+    /* position: relative; */
     overflow: hidden;
     width: 100%;
-
     border-radius: 15px;
-    transition: max-height 0.4s ease-out;
     background-color: rgba(0, 0, 0, 0.2);
     box-shadow: none;
+    height: 0px;
   }
 
   .dropdown.open > .submenu {
-    max-height: 1000px;
+    height: auto;
   }
 
   .submenu li {
@@ -267,6 +282,8 @@ h2 {
 
   .burger_icon {
     display: block;
+    left: 20px;
+    position: absolute;
   }
 
   .nav {
