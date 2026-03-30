@@ -1,0 +1,299 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#mobile-menu
+#menu1 {
+display: none !important;
+}
+body {
+  background: linear-gradient(#dd00ff, #b000b0, #b000a5, #8a0183, #000);
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+.burger_icon
+
+/* ШАПКА: ТРИ БЛОКА */
+.navbar {
+  background-color: rgba(88, 0, 88, 0.7); /* Сделал чуть прозрачным для стиля */
+  padding: 10px 40px;
+  display: flex;
+  justify-content: space-between; /* Расталкивает 3 блока: лево, центр, право */
+  align-items: center; /* Центрирует всё по вертикали */
+  position: relative;
+  z-index: 1000;
+}
+
+/* ЛОГОТИП */
+.nav-brand {
+  flex: 1; /* Занимает равную долю, чтобы центр был точным */
+}
+
+.ank {
+  height: 50px; /* Фиксированная высота для аккуратности */
+  width: auto;
+  display: block;
+}
+
+/* ЦЕНТРАЛЬНОЕ МЕНЮ */
+.nav-main-menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex: 2; /* Даем центру больше места */
+}
+
+.nav-main-menu > li {
+  position: relative; /* Нужно для позиционирования подменю */
+  padding: 10px 0;
+}
+
+.nav-main-menu a {
+  color: rgb(108, 255, 85);
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.nav-main-menu a:hover {
+  color: #656565;
+}
+
+/* НАЗВАНИЕ СПРАВА */
+.nav-title {
+  flex: 1;
+  text-align: right;
+}
+
+.a {
+  color: rgb(108, 255, 85);
+  font-size: 18px;
+  white-space: nowrap;
+}
+
+/* ВЫПАДАЮЩЕЕ МЕНЮ (DROPDOWN) */
+.submenu {
+  position: absolute;
+  top: 100%; /* Появляется строго под родительским элементом */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #444;
+  list-style: none;
+  min-width: 150px;
+  border-radius: 4px;
+  display: none; /* Прячем по умолчанию */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.submenu li {
+  border-bottom: 1px solid #555;
+}
+
+.submenu li a {
+  padding: 12px 20px;
+  display: block;
+  font-size: 14px;
+}
+
+/* Показываем меню при наведении */
+.dropdown:hover .submenu {
+  display: block;
+}
+
+.submenu li a:hover {
+  background-color: #555;
+  color: #00d4ff;
+}
+h1 {
+  color: rgb(108, 255, 85);
+  font-size: 45px;
+  white-space: nowrap;
+}
+h2 {
+  color: rgb(108, 255, 85);
+  font-size: 30px;
+  white-space: nowrap;
+}
+.photo-collagef {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 20px;
+padding: 40px;
+max-width: 1200px;
+margin: 0 auto;
+}
+.collage-itemf {
+    background: rgba(255, 255, 255, 0.1); /* Легкий фон для карточки */
+    padding: 10px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.collage-itemf img {
+    width: 100%;      /* Фото занимает всю ширину колонки */
+    height: 100%;    /* Фиксированная высота для ровности */
+    object-fit: cover; /* Обрезает фото, чтобы оно не искажалось */
+    border-radius: 10px;
+}
+
+.photo-collage {
+    display: grid;
+    /* Создаем 3 колонки равной ширины */
+    grid-template-columns: repeat(3, 1fr); 
+    /* Расстояние между фото */
+    gap: 20px; 
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto; /* Центрируем весь коллаж на странице */
+}
+
+.collage-item {
+    background: rgba(255, 255, 255, 0.1); /* Легкий фон для карточки */
+    padding: 10px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.collage-item img {
+    width: 100%;      /* Фото занимает всю ширину колонки */
+    height: 250px;    /* Фиксированная высота для ровности */
+    object-fit: cover; /* Обрезает фото, чтобы оно не искажалось */
+    border-radius: 10px;
+}
+
+.collage-item p {
+    color: white;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Эффект при наведении на всю карточку */
+.collage-item:hover {
+    transform: translateY(-10px); /* Карточка приподнимается */
+    background: rgba(255, 255, 255, 0.2);
+}
+.big-photo {
+    grid-column: span 2; /* Занимает 2 колонки из 3 */
+    grid-row: span 2;    /* Занимает 2 ряда в высоту */
+}
+@media (max-width: 768px) {
+    .photo-collage {
+        grid-template-columns: repeat(1, 1fr); /* На телефоне всё в одну колонку */
+    }
+}
+
+.burger_icon{
+  display: none;
+cursor: pointer;
+  position: relative;
+ 
+width: 30px;
+height: 30px;
+margin: 0;
+padding: 0;
+z-index: 101;
+}
+.burger_line{
+display: block;
+width: 100%;
+height: 3px;
+margin: 0;
+z-index: 101;
+margin-top: 5px;
+background: #000;
+border-radius: 2px;
+transition: all 0.3s;
+}
+
+
+
+
+
+
+
+
+
+/* Правила для планшетов и телефонов (экран меньше 768px) */
+
+    /* Кнопка-бургер становится видимой */
+
+/* Стили для иконки бургера (скрыта на ПК) */
+/* Показываем бургер только до 1000px */
+#menu-toggle {
+  display: none; /* Чтобы бургер был выше вылетающего меню */
+
+}
+/* АНИМАЦИЯ БУРГЕРА В КРЕСТИК */
+#menu-toggle:checked ~ .burger_icon .burger_line:nth-child(2) { opacity: 0; }
+#menu-toggle:checked ~ .burger_icon .burger_line:nth-child(1) { transform: translateY(5px) rotate(-45deg); }
+#menu-toggle:checked ~ .burger_icon .burger_line:nth-child(3) { transform: translateY(-12px) rotate(45deg); }
+/* ВСЁ ДЛЯ ЭКРАНОВ МЕНЬШЕ 1000px */
+@media (max-width: 768px) {
+  .ank {
+position: fixed;
+display: flex;
+flex-direction: column;
+justify-content: start;
+  }
+  .nav-title{
+display: flex;
+justify-content: end;
+flex-direction: row;
+  }
+.submenu{
+  position: static;
+  width: 100%;
+  left: 0 !important;
+  padding: 0;
+  margin: 0;
+min-height: 0;
+overflow: hidden;
+width: 100%;
+
+border-radius: 15px;
+transition: max-height 0.4s ease-out;
+background-color: rgba(0, 0, 0, 0.2);
+box-shadow: none;
+}
+
+.dropdown.open > .submenu{
+max-height: 1000px;
+}
+
+.submenu li {
+  border: none;
+  padding-left: 20px; 
+  }
+
+  .burger_icon{
+  display: block;
+}  
+
+.nav-main-menu{
+  flex-direction: column;
+position: fixed;
+padding: 50px;
+top: 0;
+left: 0;
+width: 50%;
+height: 100%;
+background-color: rgba(67, 66, 66, 0.774);
+z-index: 100;
+align-items: center;
+justify-content: flex-start;
+margin-top: 50px;
+}
+
+.collage-item img{
+    width: 100% !important;
+    height: 100px !important;
+} 
+
+#menu-toggle:checked ~ .nav-main-menu{
+  display: flex;
+}
+}
