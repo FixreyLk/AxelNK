@@ -3,9 +3,8 @@
   padding: 0;
   box-sizing: border-box;
 }
-#mobile-menu
-#menu1 {
-display: none !important;
+#mobile-menu #menu1 {
+  display: none !important;
 }
 body {
   background: linear-gradient(#dd00ff, #b000b0, #b000a5, #8a0183, #000);
@@ -117,183 +116,185 @@ h2 {
   white-space: nowrap;
 }
 .photo-collagef {
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-gap: 20px;
-padding: 40px;
-max-width: 1200px;
-margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 .collage-itemf {
-    background: rgba(255, 255, 255, 0.1); /* Легкий фон для карточки */
-    padding: 10px;
-    border-radius: 15px;
-    text-align: center;
-    transition: 0.3s;
+  background: rgba(255, 255, 255, 0.1); /* Легкий фон для карточки */
+  padding: 10px;
+  border-radius: 15px;
+  text-align: center;
+  transition: 0.3s;
 }
 
 .collage-itemf img {
-    width: 100%;      /* Фото занимает всю ширину колонки */
-    height: 100%;    /* Фиксированная высота для ровности */
-    object-fit: cover; /* Обрезает фото, чтобы оно не искажалось */
-    border-radius: 10px;
+  width: 100%; /* Фото занимает всю ширину колонки */
+  height: 100%; /* Фиксированная высота для ровности */
+  object-fit: cover; /* Обрезает фото, чтобы оно не искажалось */
+  border-radius: 10px;
 }
 
 .photo-collage {
-    display: grid;
-    /* Создаем 3 колонки равной ширины */
-    grid-template-columns: repeat(3, 1fr); 
-    /* Расстояние между фото */
-    gap: 20px; 
-    padding: 40px;
-    max-width: 1200px;
-    margin: 0 auto; /* Центрируем весь коллаж на странице */
+  display: grid;
+  /* Создаем 3 колонки равной ширины */
+  grid-template-columns: repeat(3, 1fr);
+  /* Расстояние между фото */
+  gap: 20px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto; /* Центрируем весь коллаж на странице */
 }
 
 .collage-item {
-    background: rgba(255, 255, 255, 0.1); /* Легкий фон для карточки */
-    padding: 10px;
-    border-radius: 15px;
-    text-align: center;
-    transition: 0.3s;
+  background: rgba(255, 255, 255, 0.1); /* Легкий фон для карточки */
+  padding: 10px;
+  border-radius: 15px;
+  text-align: center;
+  transition: 0.3s;
 }
 
 .collage-item img {
-    width: 100%;      /* Фото занимает всю ширину колонки */
-    height: 250px;    /* Фиксированная высота для ровности */
-    object-fit: cover; /* Обрезает фото, чтобы оно не искажалось */
-    border-radius: 10px;
+  width: 100%; /* Фото занимает всю ширину колонки */
+  height: 250px; /* Фиксированная высота для ровности */
+  object-fit: cover; /* Обрезает фото, чтобы оно не искажалось */
+  border-radius: 10px;
 }
 
 .collage-item p {
-    color: white;
-    margin-top: 10px;
-    font-weight: bold;
+  color: white;
+  margin-top: 10px;
+  font-weight: bold;
 }
 
 /* Эффект при наведении на всю карточку */
 .collage-item:hover {
-    transform: translateY(-10px); /* Карточка приподнимается */
-    background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-10px); /* Карточка приподнимается */
+  background: rgba(255, 255, 255, 0.2);
 }
 .big-photo {
-    grid-column: span 2; /* Занимает 2 колонки из 3 */
-    grid-row: span 2;    /* Занимает 2 ряда в высоту */
+  grid-column: span 2; /* Занимает 2 колонки из 3 */
+  grid-row: span 2; /* Занимает 2 ряда в высоту */
 }
 @media (max-width: 768px) {
-    .photo-collage {
-        grid-template-columns: repeat(1, 1fr); /* На телефоне всё в одну колонку */
-    }
+  .photo-collage {
+    grid-template-columns: repeat(1, 1fr); /* На телефоне всё в одну колонку */
+  }
 }
 
-.burger_icon{
+.burger_icon {
   display: none;
-cursor: pointer;
+  cursor: pointer;
   position: relative;
- 
-width: 30px;
-height: 30px;
-margin: 0;
-padding: 0;
-z-index: 101;
+
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  z-index: 101;
 }
-.burger_line{
-display: block;
-width: 100%;
-height: 3px;
-margin: 0;
-z-index: 101;
-margin-top: 5px;
-background: #000;
-border-radius: 2px;
-transition: all 0.3s;
+.burger_line {
+  display: block;
+  width: 100%;
+  height: 3px;
+  margin: 0;
+  z-index: 101;
+  margin-top: 5px;
+  background: #000;
+  border-radius: 2px;
+  transition: all 0.3s;
 }
-
-
-
-
-
-
-
-
 
 /* Правила для планшетов и телефонов (экран меньше 768px) */
 
-    /* Кнопка-бургер становится видимой */
+/* Кнопка-бургер становится видимой */
 
 /* Стили для иконки бургера (скрыта на ПК) */
 /* Показываем бургер только до 1000px */
 #menu-toggle {
   display: none; /* Чтобы бургер был выше вылетающего меню */
-
 }
 /* АНИМАЦИЯ БУРГЕРА В КРЕСТИК */
-#menu-toggle:checked ~ .burger_icon .burger_line:nth-child(2) { opacity: 0; }
-#menu-toggle:checked ~ .burger_icon .burger_line:nth-child(1) { transform: translateY(5px) rotate(-45deg); }
-#menu-toggle:checked ~ .burger_icon .burger_line:nth-child(3) { transform: translateY(-12px) rotate(45deg); }
+#menu-toggle:checked ~ .burger_icon .burger_line:nth-child(2) {
+  opacity: 0;
+}
+#menu-toggle:checked ~ .burger_icon .burger_line:nth-child(1) {
+  transform: translateY(5px) rotate(-45deg);
+}
+#menu-toggle:checked ~ .burger_icon .burger_line:nth-child(3) {
+  transform: translateY(-12px) rotate(45deg);
+}
 /* ВСЁ ДЛЯ ЭКРАНОВ МЕНЬШЕ 1000px */
 @media (max-width: 768px) {
   .ank {
-position: fixed;
-display: flex;
-flex-direction: column;
-justify-content: start;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
   }
-  .nav-title{
-display: flex;
-justify-content: end;
-flex-direction: row;
+  .nav-title {
+    display: flex;
+    justify-content: end;
+    flex-direction: row;
   }
-.submenu{
-  position: static;
-  width: 100%;
-  left: 0 !important;
-  padding: 0;
-  margin: 0;
-min-height: 0;
-overflow: hidden;
-width: 100%;
+  .submenu {
+    position: static;
+    width: 100%;
+    left: 0 !important;
+    padding: 0;
+    margin: 0;
+    min-height: 0;
+    overflow: hidden;
+    width: 100%;
 
-border-radius: 15px;
-transition: max-height 0.4s ease-out;
-background-color: rgba(0, 0, 0, 0.2);
-box-shadow: none;
-}
-
-.dropdown.open > .submenu{
-max-height: 1000px;
-}
-
-.submenu li {
-  border: none;
-  padding-left: 20px; 
+    border-radius: 15px;
+    transition: max-height 0.4s ease-out;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: none;
   }
 
-  .burger_icon{
-  display: block;
-}  
+  .dropdown.open > .submenu {
+    max-height: 1000px;
+  }
 
-.nav-main-menu{
-  flex-direction: column;
-position: fixed;
-padding: 50px;
-top: 0;
-left: 0;
-width: 50%;
-height: 100%;
-background-color: rgba(67, 66, 66, 0.774);
-z-index: 100;
-align-items: center;
-justify-content: flex-start;
-margin-top: 50px;
-}
+  .submenu li {
+    border: none;
+    padding-left: 20px;
+  }
 
-.collage-item img{
+  .burger_icon {
+    display: block;
+  }
+
+  .nav {
+    display: flex;
+  }
+
+  .nav-main-menu {
+    flex-direction: column;
+    position: fixed;
+    padding: 50px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(67, 66, 66, 0.774);
+    z-index: 100;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 50px;
+    display: none;
+  }
+
+  .collage-item img {
     width: 100% !important;
     height: 100px !important;
-} 
+  }
 
-#menu-toggle:checked ~ .nav-main-menu{
-  display: flex;
-}
+  #menu-toggle:checked ~ .nav-main-menu {
+    display: flex;
+  }
 }
