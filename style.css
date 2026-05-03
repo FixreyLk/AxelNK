@@ -1,21 +1,21 @@
 :root {
   /* --- Акцентні кольори (Бренд) --- */
-  --primary-purple: #9c27b0;       /* Колір кнопки "ХОЧУ НА ПРОБНЕ ЗАНЯТТЯ!" */
-  --secondary-navy: #1e1e3f;       /* Темно-синій для кнопок у хедері, карток тренерів та футера */
-  --accent-gold: #c5a059;         /* Золотистий для іконок досягнень та рамки головної кнопки */
+  --primary-purple: #9c27b0; /* Колір кнопки "ХОЧУ НА ПРОБНЕ ЗАНЯТТЯ!" */
+  --secondary-navy: #1e1e3f; /* Темно-синій для кнопок у хедері, карток тренерів та футера */
+  --accent-gold: #c5a059; /* Золотистий для іконок досягнень та рамки головної кнопки */
 
   /* --- Фонові кольори --- */
-  --bg-white: #ffffff;             /* Основний фон сторінки та карток послуг */
-  --bg-footer: #14142b;           /* Глибокий темний колір для футера */
-  --bg-card-light: #f9f9f9;       /* Світлий фон для блоків або підкладок */
+  --bg-white: #ffffff; /* Основний фон сторінки та карток послуг */
+  --bg-footer: #14142b; /* Глибокий темний колір для футера */
+  --bg-card-light: #f9f9f9; /* Світлий фон для блоків або підкладок */
 
   /* --- Кольори тексту --- */
-  --text-dark: #000000;           /* Основні заголовки ("Наші інструктори", "Програми") */
-  --text-muted: #4a4a4a;          /* Колір для описів та допоміжного тексту */
-  --text-light: #ffffff;          /* Білий текст для кнопок та темних плашок */
+  --text-dark: #000000; /* Основні заголовки ("Наші інструктори", "Програми") */
+  --text-muted: #4a4a4a; /* Колір для описів та допоміжного тексту */
+  --text-light: #ffffff; /* Білий текст для кнопок та темних плашок */
 
   /* --- Межі та тіні --- */
-  --border-light: #e0e0e0;        /* Колір рамок карток послуг */
+  --border-light: #e0e0e0; /* Колір рамок карток послуг */
   --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.08); /* М'яка тінь для об'ємності карток */
 }
 
@@ -28,13 +28,13 @@
   display: none !important;
 }
 body {
-  background: linear-gradient(#dd00ff, #b000b0, #b000a5, #8a0183, #000);
+  background: var(--bg-white);
   min-height: 100vh;
   font-family: Arial, sans-serif;
 }
 /* ШАПКА: ТРИ БЛОКА */
 .navbar {
-  background-color: rgba(88, 0, 88, 0.7); /* Сделал чуть прозрачным для стиля */
+  background-color: var(--bg-white);
   padding: 10px 40px;
   display: flex;
   justify-content: space-between; /* Расталкивает 3 блока: лево, центр, право */
@@ -45,7 +45,7 @@ body {
 
 /* ЛОГОТИП */
 .nav-brand {
-  flex: 1; /* Занимает равную долю, чтобы центр был точным */
+
 }
 
 .ank {
@@ -69,7 +69,7 @@ body {
 }
 
 .nav-main-menu a {
-  color: rgb(108, 255, 85);
+  color: var(--text-dark);
   text-decoration: none;
   font-size: 16px;
   transition: 0.3s;
@@ -81,14 +81,53 @@ body {
 
 /* НАЗВАНИЕ СПРАВА */
 .nav-title {
-  flex: 1;
-  text-align: right;
+  text-align: left;
+  margin-left: 20px;
 }
 
 .a {
-  color: rgb(108, 255, 85);
+  color: var(--text-dark);
   font-size: 18px;
   white-space: nowrap;
+}
+.btn{
+height: 35px;
+padding: 8px;
+border-radius: 25px;
+border:2px solid  var(--border-light);
+background: var(--secondary-navy);
+color: var(--text-light);
+cursor: pointer;
+transition: 0.3s;
+}
+.btn:hover{
+background: var(--primary-purple);
+}
+.btn:active{
+background: var(--secondary-navy);
+transform: scale(0.9);
+}
+.buner{
+background: #FFF;
+background: -webkit-linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(20, 20, 43, 1) 35%, rgba(20, 20, 43, 1) 65%, rgba(255, 255, 255, 0) 100%);
+background: -moz-linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(20, 20, 43, 1) 35%, rgba(20, 20, 43, 1) 65%, rgba(255, 255, 255, 0) 100%);
+background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(20, 20, 43, 1) 35%, rgba(20, 20, 43, 1) 65%, rgba(255, 255, 255, 0) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#FFFFFF", endColorstr="#FFFFFF", GradientType=1);
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+height: 70vh;
+color: var(--text-light);
+}
+.buner > *{
+color: var(--text-light);
+margin: 20px;
+}
+.buner > .btn{
+height: 70px;
+width: 250px;
+font-size: 20px;
 }
 
 /* ВЫПАДАЮЩЕЕ МЕНЮ (DROPDOWN) */
@@ -125,38 +164,36 @@ body {
   color: #00d4ff;
 }
 h1 {
-  color: rgb(108, 255, 85);
+  color: var(--text-dark);
   font-size: 45px;
   white-space: nowrap;
 }
 h2 {
-  color: rgb(108, 255, 85);
+  color: var(--text-dark);
   font-size: 30px;
   white-space: nowrap;
 }
-.photo-collagef {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  padding: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
+section{
+  display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 70vh;
 }
-.collage-itemf {
-  background: rgba(255, 255, 255, 0.1); /* Легкий фон для карточки */
-  padding: 10px;
-  border-radius: 15px;
-  text-align: center;
-  transition: 0.3s;
+section.couthes img{
+  height: 400px;
+  width: 200px;
 }
 
-.collage-itemf img {
-  width: 100%; /* Фото занимает всю ширину колонки */
-  height: 100%; /* Фиксированная высота для ровности */
-  object-fit: cover; /* Обрезает фото, чтобы оно не искажалось */
-  border-radius: 10px;
-}
+.card{
+display: flex;
+background: #10111d;
+border-radius: 25px;
+width: 400px;
+height: 300px;
+margin: 30px;
 
+}
 .photo-collage {
   display: grid;
   /* Создаем 3 колонки равной ширины */
@@ -290,9 +327,9 @@ h2 {
     background-color: rgba(0, 0, 0, 0.2);
     box-shadow: none;
     height: 0px;
-     transition: all 0.3s;
+    transition: all 0.3s;
   }
-  .dropdown.open{
+  .dropdown.open {
     display: flex;
     width: 100%;
     align-items: center;
